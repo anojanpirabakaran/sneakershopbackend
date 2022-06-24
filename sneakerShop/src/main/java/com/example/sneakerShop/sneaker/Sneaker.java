@@ -1,9 +1,6 @@
 package com.example.sneakerShop.sneaker;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Sneaker {
@@ -16,6 +13,7 @@ public class Sneaker {
 
     private String description;
 
+    @Column(length = 400)
     private String image;
 
     private String price;
