@@ -1,4 +1,4 @@
-package com.example.sneakerShop.user;
+package com.example.sneakerShop.client;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,8 +30,8 @@ public class User {
 
     private double cardBalance;
 
-    public User(Long id, String lastName, String firstName, String email, String password,
-                String address, int plz, String city, String phoneNumber, double cardBalance) {
+    public Client(Long id, String lastName, String firstName, String email, String password,
+                  String address, int plz, String city, String phoneNumber, double cardBalance) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -44,7 +44,7 @@ public class User {
         this.cardBalance = cardBalance;
     }
 
-    public User() {
+    public Client() {
     }
 
     public Long getId() {

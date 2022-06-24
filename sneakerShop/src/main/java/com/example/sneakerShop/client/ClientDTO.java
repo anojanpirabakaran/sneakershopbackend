@@ -1,6 +1,6 @@
-package com.example.sneakerShop.user;
+package com.example.sneakerShop.client;
 
-public class UserDTO{
+public class ClientDTO {
 
     private Long id;
     private String lastName;
