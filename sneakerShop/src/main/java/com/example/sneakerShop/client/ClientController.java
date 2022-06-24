@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/clients")
+@CrossOrigin("http://localhost:3000")
 public class ClientController {
 
     private final ClientService clientService;

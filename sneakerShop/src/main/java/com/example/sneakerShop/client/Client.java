@@ -3,7 +3,6 @@ package com.example.sneakerShop.client;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "client")
 public class Client {
 
     @Id
