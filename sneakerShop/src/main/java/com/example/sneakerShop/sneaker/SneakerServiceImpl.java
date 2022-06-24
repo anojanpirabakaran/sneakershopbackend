@@ -69,7 +69,7 @@ public class SneakerServiceImpl implements SneakerService {
                 }).orElseGet(() -> {
                     sneaker.setId(id);
                     sneakerRepository.save(sneaker);
-                    return "Sneaker got updated";
+                    return "Sneaker got inserted";
                 });
         return "Sneaker got updated";
     }
