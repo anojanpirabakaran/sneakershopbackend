@@ -1,11 +1,9 @@
 package com.example.sneakerShop.client;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "client")
 public class Client {
 
     @Id
