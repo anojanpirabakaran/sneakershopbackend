@@ -12,7 +12,7 @@ public class Reservation {
 
     private long count;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "client_id")
     private Client client;
 
