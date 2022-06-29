@@ -16,7 +16,7 @@ public class Sneaker {
     @Column(length = 400)
     private String image;
 
-    private String price;
+    private float price;
 
     private String brand;
 
@@ -24,7 +24,7 @@ public class Sneaker {
     public Sneaker() {
     }
 
-    public Sneaker(Long id, String name, String description, String image, String price, String brand) {
+    public Sneaker(Long id, String name, String description, String image, float price, String brand) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -65,11 +65,11 @@ public class Sneaker {
         this.image = image;
     }
 
-    public String getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
