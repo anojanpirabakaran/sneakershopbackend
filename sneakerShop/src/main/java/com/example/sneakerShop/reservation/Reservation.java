@@ -14,12 +14,12 @@ public class Reservation {
     private long count;
 
     @OneToOne
-    @JoinColumn(name = "client_id")
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client;
 
 
     @ManyToOne
-    @JoinColumn(name = "sneaker_id")
+    @JoinColumn(name = "sneaker_id", referencedColumnName = "id")
     private Sneaker sneaker;
 
     public Reservation(Long id, long count, Client client, Sneaker sneaker) {
