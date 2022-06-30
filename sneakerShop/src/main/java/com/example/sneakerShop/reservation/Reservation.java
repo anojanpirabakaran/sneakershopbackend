@@ -5,6 +5,7 @@ import com.example.sneakerShop.sneaker.Sneaker;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "reservation")
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
