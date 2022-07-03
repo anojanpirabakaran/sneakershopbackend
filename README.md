@@ -5,6 +5,9 @@ Dieses README dokumentiert die Schritte, die notwendig sind, um das HouseOfKickz
 # Systemarchitektur
 Die Systemarchitektur von HouseofKickz ist eine 3-tier Architekur, die durch drei Ebenen definiert ist: Presentation, Business und Data Access Layer.
 
+![image](https://user-images.githubusercontent.com/69903847/177051701-272a53ef-1ece-4fa9-9c11-cd436dfbf307.png)
+
+
 
 # Voraussetzungen
 Seien Sie sicher, das Sie JAVA JDK VERSION 11 haben.
