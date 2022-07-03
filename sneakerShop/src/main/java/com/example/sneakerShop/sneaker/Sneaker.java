@@ -2,6 +2,9 @@ package com.example.sneakerShop.sneaker;
 
 import javax.persistence.*;
 
+/**
+ * The Sneaker Model
+ */
 @Entity
 public class Sneaker {
 

@@ -4,6 +4,9 @@ import com.example.sneakerShop.client.Client;
 import com.example.sneakerShop.sneaker.Sneaker;
 import javax.persistence.*;
 
+/**
+ * The Reservation Model
+ */
 @Entity
 @Table(name = "reservation")
 public class Reservation {

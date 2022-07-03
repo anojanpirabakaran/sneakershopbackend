@@ -2,6 +2,9 @@ package com.example.sneakerShop.reservation;
 
 import java.util.List;
 
+/**
+ * The Service Interface for the Reservation.
+ */
 public interface ReservationService {
 
     Reservation findById(Long id);

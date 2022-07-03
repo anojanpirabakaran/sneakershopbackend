@@ -2,6 +2,9 @@ package com.example.sneakerShop.client;
 
 import java.util.List;
 
+/**
+ * The Service Interface for the Client.
+ */
 public interface ClientService {
 
     Client findById(Long id);

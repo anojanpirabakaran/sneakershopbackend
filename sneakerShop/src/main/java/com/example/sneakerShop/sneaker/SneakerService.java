@@ -2,6 +2,9 @@ package com.example.sneakerShop.sneaker;
 
 import java.util.List;
 
+/**
+ * The Service Interface for the Sneaker.
+ */
 public interface SneakerService {
 
     Sneaker findById(Long id);

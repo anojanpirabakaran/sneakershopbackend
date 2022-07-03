@@ -6,9 +6,16 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+/**
+ * The implementation of the interface {@link ClientService}
+ */
 @Service
 public class ClientServiceImpl implements ClientService {
 
+    /**
+     * the repository used to execute the CRUD actions
+     */
     @Autowired
     private final ClientRepository clientRepository;
 
@@ -16,7 +23,12 @@ public class ClientServiceImpl implements ClientService {
         this.clientRepository = clientRepository;
     }
 
-
+    /**
+     * find client by id
+     *
+     * @param id id from user
+     * @return client, which has the given id
+     */
     @Override
     public Client findById(Long id) {
         if (clientRepository.existsById(id)) {
@@ -27,7 +39,12 @@ public class ClientServiceImpl implements ClientService {
         }
     }
 
-
+    /**
+     * create client
+     *
+     * @param client the client
+     * @return the new client
+     */
     @Override
     public Client createClient(Client client) {
         if (clientRepository.findByEmail(client.getEmail()) != null) {
@@ -38,6 +55,13 @@ public class ClientServiceImpl implements ClientService {
         }
     }
 
+    /**
+     * update client by client
+     *
+     * @param id     the chosen clients id
+     * @param client the client
+     * @return the updated client
+     */
     @Override
     public String updateClient(Long id, Client client) {
         clientRepository.findById(id)
@@ -60,6 +84,12 @@ public class ClientServiceImpl implements ClientService {
         return "Group is updated";
     }
 
+    /**
+     * delete client by id
+     *
+     * @param id the chosen clients id
+     * @return String, which confirms action
+     */
     @Override
     public String deleteById(Long id) {
         if (clientRepository.existsById(id)) {
@@ -70,11 +100,22 @@ public class ClientServiceImpl implements ClientService {
         }
     }
 
+    /**
+     * get all clients from the db
+     *
+     * @return all clients from db
+     */
     @Override
     public List<Client> getAllClients() {
         return clientRepository.findAll();
     }
 
+    /**
+     * find client by email
+     *
+     * @param email email from the client
+     * @return the client with the given email
+     */
     public Client getByEmail(String email) {
         return clientRepository.findByEmail(email);
     }

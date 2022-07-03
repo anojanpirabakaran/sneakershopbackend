@@ -5,9 +5,15 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * The implementation of the interface {@link SneakerService}
+ */
 @Service
 public class SneakerServiceImpl implements SneakerService {
 
+    /**
+     * the repository used to execute the CRUD actions
+     */
     @Autowired
     private final SneakerRepository sneakerRepository;
 
@@ -15,22 +21,39 @@ public class SneakerServiceImpl implements SneakerService {
         this.sneakerRepository = sneakerRepository;
     }
 
-
+    /**
+     * find sneaker by id
+     *
+     * @param id id from sneaker
+     * @return sneaker, which has the given id
+     */
     @Override
     public Sneaker findById(Long id) {
         Optional<Sneaker> sneaker = sneakerRepository.findById(id);
         return sneaker.orElse(null);
     }
 
+    /**
+     * find by sneaker name
+     *
+     * @param name the sneaker name
+     * @return the new sneaker
+     */
     @Override
     public Sneaker findByName(String name) {
-        if(sneakerRepository.findByName(name) != null) {
+        if (sneakerRepository.findByName(name) != null) {
             return sneakerRepository.findByName(name);
         } else {
             return null;
         }
     }
 
+    /**
+     * create sneaker
+     *
+     * @param sneaker the sneaker
+     * @return the new sneaker
+     */
     @Override
     public Sneaker saveSneaker(Sneaker sneaker) {
         if (sneakerRepository.findByName(sneaker.getName()) != null) {
@@ -40,6 +63,12 @@ public class SneakerServiceImpl implements SneakerService {
         }
     }
 
+    /**
+     * delete sneaker by id
+     *
+     * @param id the chosen sneaker id
+     * @return String, which confirms action
+     */
     @Override
     public String deleteSneaker(Long id) {
         if (sneakerRepository.existsById(id)) {
@@ -50,11 +79,23 @@ public class SneakerServiceImpl implements SneakerService {
         }
     }
 
+    /**
+     * get all sneaker from the db
+     *
+     * @return all sneaker from db
+     */
     @Override
     public List<Sneaker> getAll() {
         return sneakerRepository.findAll();
     }
 
+    /**
+     * update sneaker by sneaker
+     *
+     * @param id      the chosen sneaker id
+     * @param sneaker the sneaker
+     * @return the updated sneaker
+     */
     @Override
     public String updateSneaker(Long id, Sneaker sneaker) {
         sneakerRepository.findById(id)

@@ -2,6 +2,9 @@ package com.example.sneakerShop.client;
 
 import javax.persistence.*;
 
+/**
+ * The Client Model
+ */
 @Entity
 public class Client {
 
